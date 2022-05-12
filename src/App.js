@@ -5,9 +5,27 @@ import "./Assets/style.css"
 
 import AirEasy from"./Logo/aireasy.png";
 
-import { Button,Row,Container,Col,Card,CardGroup,ListGroup,ListGroupItem,Navbar,Nav,Form,FormControl} from 'react-bootstrap';
 
+import { Button,Row,Container,Col,Card,CardGroup,ListGroup,ListGroupItem,Navbar,Nav,Form,FormControl,Modal} from 'react-bootstrap';
+
+
+
+  
 function App() {
+
+  
+// constructor()
+// {
+//   super()
+//   this.state={
+//     show:false
+//   }
+// }
+// handleModal()
+// {
+//   this.setState({show: !this.state.show})
+// } 
+
   return (
     <div className="body">
       <Container fluid className="m-0 p-0">
@@ -55,7 +73,8 @@ function App() {
 
           {/* main body */}
           <Col lg={10} className="m-0 pb-3">
-
+            
+            
             {/* top navigation */}
             <Col lg={12}>
           
@@ -84,7 +103,21 @@ function App() {
                       style={{ maxHeight: '100px' }}
                       navbarScroll
                     >
-                      <Nav.Link href="#" className="m-1 p-2 btn btn-primary" style={{color: '#fff'}}>Sign Up</Nav.Link>
+                      <Nav.Link href="#" onClick={()=> { show = { true } }} className="m-1 p-2 btn btn-primary" style={{color: '#fff'}}>Sign Up</Nav.Link>
+
+
+                        <Modal show={false}>
+
+                          <Modal.Header>Modal head</Modal.Header>
+
+                          <Modal.Body>Modal body</Modal.Body>
+
+                          <Modal.Footer>
+                            <Button variant="primary" onClick={()=>{show={true}}}>Close</Button>
+                          </Modal.Footer>
+
+                        </Modal>
+
                       <Nav.Link href="#" className="m-1 p-2 btn btn-secondary" style={{color: '#fff'}}>Log In</Nav.Link>
                       <div className="vr mx-2"></div>
                       <Nav.Link href="#" className="m-1 p-2 btn btn-primary" style={{color: '#fff'}}>Filter</Nav.Link>
