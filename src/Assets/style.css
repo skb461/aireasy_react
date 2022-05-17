@@ -38,6 +38,13 @@
 
 /* main Body */
 
+/* top menu */
+.top_img{
+    right: auto;
+}
+.top_img_display{
+    display: none;
+}
 
 /* main body > top 3 card */
 
@@ -70,7 +77,11 @@
     .SaidMenu {
       display: none;
     }
+    .top_img_display{
+        display: block;
+    }
     .SimilarPropertiesQuary{
         display: block;
     }
   }
+  
