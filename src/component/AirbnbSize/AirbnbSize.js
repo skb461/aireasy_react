@@ -1,16 +1,15 @@
 
 import "../../../node_modules/bootstrap/dist/css/bootstrap.min.css";
-// import "./Amenities.css"
 
 import {Card,Col} from 'react-bootstrap';
 
-function Amenities() {
+function AirbnbSize() {
     return(
     <>
         <Col lg={12}>
             <Card border="light" className="m-1 rounded displayCard_2">
                 <Card.Body>
-                    <Card.Title>Amenities</Card.Title>
+                    <Card.Title>Airbnb Size</Card.Title>
                     <Card.Text> </Card.Text>
                 </Card.Body>
             </Card>
@@ -18,4 +17,4 @@ function Amenities() {
     </>
     )
 }
-export default Amenities;
+export default AirbnbSize;

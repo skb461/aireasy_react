@@ -3,13 +3,22 @@ import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 
 import "./Assets/style.css"
 
-import AirEasy from"./Logo/aireasy.png";
-
 import MultiRangeSlider from "./component/multiRangeSlider/MultiRangeSlider";
 import Amenities from "./component/Amenities/Amenities";
+import AirbnbSize from "./component/AirbnbSize/AirbnbSize";
+import RentalSize from "./component/RentalSize/RentalSize";
+import RentalType from "./component/RentalType/RentalType";
+import RentalSetting from "./component/RentalSetting/RentalSetting";
+import Map from "./component/Map/Map";
+import ProfitSimulation from "./component/ProfitSimulation/ProfitSimulation";
+import AverageDailyRate from "./component/AverageDailyRate/AverageDailyRate";
+import Revenue from "./component/Revenue/Revenue";
+import OccupancyRate from "./component/OccupancyRate/OccupancyRate";
+import LeftMenu from "./component/LeftMenu/LeftMenu";
 
 
-import { Button,Row,Container,Col,Card,CardGroup,ListGroup,ListGroupItem,Navbar,Nav,Form,FormControl,Modal} from 'react-bootstrap';
+
+import { Button,Row,Container,Col,CardGroup,Navbar,Nav,Form,FormControl,Modal} from 'react-bootstrap';
 import { useState } from "react";
 
 
@@ -32,40 +41,7 @@ function App() {
 
           <Col lg={2} className="md-2 m-0 p-0 SaidMenu">
 
-            <Card style={{height: '100%'}} className="leftMenuCard p-0">
-              <Card.Img variant="top" src={AirEasy} className="Image d-block mx-auto mt-5 mb-1"/>
-              <Card.Body>
-                <Card.Text>
-                  <Card.Body className="leftMenuCard_1 rounded p-0">
-                    <Card.Title>
-                      <h4 className="text-bolder p-2">Research</h4>
-                    </Card.Title>
-                    <Card.Text className="ml-0 mr-0">
-
-                      <ListGroup className="list-group-flush listItem rounded">
-
-                        <ListGroupItem className="bg-transparent">
-                          <Card.Link href="#" className="btn col-12 Button">Overview</Card.Link>
-                        </ListGroupItem>
-
-                        <ListGroupItem className="bg-transparent">
-                          <Card.Link href="#" className="btn col-12 Button">Similar Properties</Card.Link>
-                        </ListGroupItem>
-
-                      </ListGroup>
-
-                    </Card.Text>
-                  </Card.Body>
-                </Card.Text>
-              </Card.Body>
-
-              <Card.Footer>
-                <Card.Text>
-                  <h6 className="text-light pl-5">COPYRIGHT © 2022</h6>
-                </Card.Text>
-              </Card.Footer>
-
-            </Card>
+            <LeftMenu />
 
           </Col>
 
@@ -75,7 +51,7 @@ function App() {
             
             {/* top navigation */}
             <Col lg={12}>
-          
+
               <Navbar bg="light" expand="lg" className="">
                 <Container fluid className="px-3">
                   <Navbar.Toggle aria-controls="basic-navbar-nav" className="m-1" />
@@ -232,7 +208,7 @@ function App() {
                               </Form.Group> 
 
 
-                              <Form.Group className="mb-3 col-11 mx-auto my-2 pb-5" controlId="formBasicType">
+                              <Form.Group className="mb-3 col-11 mx-auto my-2 pb-5" controlId="BedRoom">
 
                                 <Form.Label>Bedrooms</Form.Label>
                                 <MultiRangeSlider
@@ -243,7 +219,7 @@ function App() {
                                 />
 
                               </Form.Group>
-                              <Form.Group className="mb-3 col-11 mx-auto my-2 pb-5" controlId="formBasicType">
+                              <Form.Group className="mb-3 col-11 mx-auto my-2 pb-5" controlId="BathRoom">
 
                                 <Form.Label>Bathrooms</Form.Label>
                                 <MultiRangeSlider
@@ -254,7 +230,7 @@ function App() {
                                 />
 
                               </Form.Group>
-                              <Form.Group className="mb-3 col-11 mx-auto my-2 pb-5" controlId="formBasicType">
+                              <Form.Group className="mb-3 col-11 mx-auto my-2 pb-5" controlId="MinimumStay">
 
                                 <Form.Label>minimum Stay</Form.Label>
                                 <MultiRangeSlider
@@ -356,41 +332,11 @@ function App() {
 
                 <CardGroup className="px-4 mt-4">
 
-                  <Card border="light" className="m-1 rounded">
-                    <Card.Body>
-                      <Card.Title>Average Daily Rate</Card.Title>
-                      <Card.Text>
-                        <h1 className="display-3 boldText">220$</h1>
-                      </Card.Text>
-                    </Card.Body>
-                    <Card.Footer>
-                      <small className="text-muted text-right">Dummy text</small>
-                    </Card.Footer>
-                  </Card>
+                  <AverageDailyRate />
 
-                  <Card border="light" className="m-1 rounded">
-                    <Card.Body>
-                      <Card.Title>Occupancy Rate</Card.Title>
-                      <Card.Text>
-                        <h1 className="display-3 boldText">68%</h1>
-                      </Card.Text>
-                    </Card.Body>
-                    <Card.Footer>
-                      <small className="text-muted text-right">Dummy text</small>
-                    </Card.Footer>
-                  </Card>
+                  <OccupancyRate />
 
-                  <Card border="light" className="m-1 rounded">
-                    <Card.Body>
-                      <Card.Title>Revenue</Card.Title>
-                      <Card.Text>
-                        <h1 className="display-3 boldText">$2000</h1>
-                      </Card.Text>
-                    </Card.Body>
-                    <Card.Footer>
-                      <small className="text-muted text-right">Dummy text</small>
-                    </Card.Footer>
-                  </Card>
+                  <Revenue />
 
                 </CardGroup>
 
@@ -405,28 +351,13 @@ function App() {
 
                 {/* Profit simulation */}
                 <Col lg={4}>
-                  <Card border="light" className="m-1 rounded displayCard_1">
-                    <Card.Body>
-                      <Card.Title>Profit Simulation</Card.Title>
-                      <Card.Text> </Card.Text>
-                    </Card.Body>
-                  </Card>
+                  <ProfitSimulation />
                 </Col>
 
                 {/* Map */}
                 <Col lg={8}>
-                  <Card border="light" className="m-1 rounded displayCard">
-                    <Card.Body>
-                      <Card.Title>Map</Card.Title>
-                      <Card.Text> </Card.Text>
-                    </Card.Body>
-                  </Card>
-                  <Card border="light" className="m-1 mt-3 rounded displayCard_3">
-                    <Card.Body>
-                      <Card.Title>Rental Setting</Card.Title>
-                      <Card.Text> </Card.Text>
-                    </Card.Body>
-                  </Card>
+                  <Map />
+                  <RentalSetting />
                 </Col>
               </Row>
 
@@ -439,22 +370,12 @@ function App() {
 
                 {/* Rental Type */}
                 <Col lg={6}>
-                  <Card border="light" className="m-1 rounded displayCard_2">
-                    <Card.Body>
-                      <Card.Title>Rental Type</Card.Title>
-                      <Card.Text> </Card.Text>
-                    </Card.Body>
-                  </Card>
+                  <RentalType />
                 </Col>
 
                 {/* Rental Size */}
                 <Col lg={6}>
-                  <Card border="light" className="m-1 rounded displayCard_2">
-                    <Card.Body>
-                      <Card.Title>Rental Size</Card.Title>
-                      <Card.Text> </Card.Text>
-                    </Card.Body>
-                  </Card>
+                  <RentalSize />
                 </Col>
               </Row>
 
@@ -472,12 +393,7 @@ function App() {
 
                 {/* Airbnb Size */}
                 <Col lg={6}>
-                  <Card border="light" className="m-1 rounded displayCard_2">
-                    <Card.Body>
-                      <Card.Title>Airbnb Size</Card.Title>
-                      <Card.Text> </Card.Text>
-                    </Card.Body>
-                  </Card>
+                  <AirbnbSize />
                 </Col>
               </Row>
 
