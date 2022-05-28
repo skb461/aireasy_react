@@ -25,7 +25,7 @@ function LeftMenu() {
                     </ListGroupItem>
 
                     <ListGroupItem className="bg-transparent">
-                      <Card.Link href="#" className="btn col-12 Button">Similar Properties</Card.Link>
+                      <Card.Link href="SimilerProduct" className="btn col-12 Button">Similar Properties</Card.Link>
                     </ListGroupItem>
 
                   </ListGroup>
