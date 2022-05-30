@@ -403,7 +403,7 @@ function App() {
 
             {/* Similer product*/}
             <Col lg={12} id="SimilerProduct">
-              <p className="display-3 py-5 m-1"> Similer Product </p>
+              <p className="display-3 py-5 m-1"> Similer Properties </p>
               <SimilerProduct lg={12} className=" px-4"/>
             </Col>
             
