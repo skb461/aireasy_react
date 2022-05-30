@@ -405,11 +405,6 @@ function App() {
             <Col lg={12} id="SimilerProduct">
               <p className="display-3 py-5 m-1"> Similer Product </p>
               <SimilerProduct lg={12} className=" px-4"/>
-              <SimilerProduct lg={12} className=" px-4" />
-              <SimilerProduct lg={12} className=" px-4" />
-              <SimilerProduct lg={12} className=" px-4" />
-              <SimilerProduct lg={12} className=" px-4" />
-
             </Col>
             
             
